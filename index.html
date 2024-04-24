@@ -41,55 +41,79 @@
   <body
     class="theme-pink"
     onload="(()=>{
-        const ts = document.getElementById('ts-icon')
-        const theme = localStorage.getItem('theme')
+      // Load theme from localStorage
 
-        if (theme === 'theme-pink') {
-            document.body.classList.remove('theme-dark')
-            document.body.classList.add(theme)
-            ts.classList.remove('fa-sun')
-            ts.classList.add('fa-moon', 'fa-sm')
-        }
-        if (theme === 'theme-dark') {
-            document.body.classList.remove('theme-pink')
-            document.body.classList.add(theme)
-            ts.classList.remove('fa-moon', 'fa-sm')
-            ts.classList.add('fa-sun')
-        }
+      const themes = ['theme-pink', 'theme-dark', 'theme-sky']
+      const icons = ['fa-moon', 'fa-sun', 'fa-sm', 'fa-heart']
+      const theme = localStorage.getItem('theme')
+      const ts = document.getElementById('ts-icon')
+
+      // Add the icons of the *next* theme to each ts.classList
+      if (theme === 'theme-pink') {
+        ts.classList.remove(...icons)
+        ts.classList.add('fa-moon', 'fa-sm')
+        document.body.classList.remove(...themes)
+        document.body.classList.add(theme)
+      }
+      if (theme === 'theme-dark') {
+        ts.classList.remove(...icons)
+        ts.classList.add('fa-sun')
+        document.body.classList.remove(...themes)
+        document.body.classList.add(theme)
+      }
+      if (theme === 'theme-sky') {
+        ts.classList.remove(...icons)
+        ts.classList.add('fa-heart')
+        document.body.classList.remove(...themes)
+        document.body.classList.add(theme)
+      }
     })()"
   >
     <span
       class="theme-switcher"
       onclick="(() => {
-            const ts = document.getElementById('ts-icon')
+        // Switch to next theme
 
-            if (ts.classList.contains('fa-sun')) {
-                // Change to pink theme
-                ts.classList.remove('fa-sun')
-                ts.classList.add('fa-moon', 'fa-sm')
-                document.body.classList.remove('theme-dark')
-                document.body.classList.add('theme-pink')
-                localStorage.setItem('theme', 'theme-pink')
-            } else {
-                // Change to dark theme
-                ts.classList.remove('fa-moon', 'fa-sm')
-                ts.classList.add('fa-sun')
-                document.body.classList.remove('theme-pink')
-                document.body.classList.add('theme-dark')
-                localStorage.setItem('theme', 'theme-dark')
-            }
-        })()"
+        const themes = ['theme-pink', 'theme-dark', 'theme-sky']
+        const icons = ['fa-moon', 'fa-sun', 'fa-sm', 'fa-heart']
+        const theme = localStorage.getItem('theme')
+        const ts = document.getElementById('ts-icon')
+
+        // Add the icons of the *next-next* theme to each ts.classList
+        switch (theme) { 
+          case 'theme-pink': {
+            ts.classList.remove(...icons)
+            ts.classList.add('fa-sun')
+            document.body.classList.remove(...themes)
+            document.body.classList.add('theme-dark')
+            localStorage.setItem('theme', 'theme-dark')
+            break
+          }
+          case 'theme-dark': {
+            ts.classList.remove(...icons)
+            ts.classList.add('fa-heart')
+            document.body.classList.remove(...themes)
+            document.body.classList.add('theme-sky')
+            localStorage.setItem('theme', 'theme-sky')
+            break
+          }
+          case 'theme-sky': {
+            ts.classList.remove(...icons)
+            ts.classList.add('fa-moon', 'fa-sm')
+            document.body.classList.remove(...themes)
+            document.body.classList.add('theme-pink')
+            localStorage.setItem('theme', 'theme-pink')
+            break
+          }
+        }
+      })()"
     >
       <i id="ts-icon" class="fas fa-sun"></i>
     </span>
 
     <div style="max-width: 768px; margin: 0 auto">
-      <div class="mascot">
-        <div class="logo" style="margin: 1em">
-          <a href="TODO_MARKETPLACE">
-            <img src="images/banner.png" style="border: 2px solid gray; width: 100%; max-width: 500px"
-          /></a>
-        </div>
+      <div class="banner">
+        <a href="TODO_MARKETPLACE"><img src="images/banner.png" /></a>
       </div>
 
       <div class="header-box">
@@ -142,14 +166,30 @@
         </div>
       </div>
 
-      <!-- 
-      <div style="margin: 0 auto; width: 50%; margin: 2em 0">
-        <audio controls autoplay loop style="width: 100%">
+      <div>
+        <audio autoplay loop id="_audio">
           <source src="audio/ost.ogg" type="audio/ogg" />
-          <source src="audio/ost.mp3" type="audio/mpeg" />
+          <!-- <source src="audio/ost.mp3" type="audio/mpeg" /> -->
         </audio>
-      </div> 
-      -->
+        <div
+          class="abtn"
+          id="player"
+          onclick="(()=>{
+                const audio = document.getElementById('_audio')
+                if (audio.paused) {
+                  audio.play()
+                  document.getElementById('player').innerText = '⏸'
+                  document.getElementById('player').classList.add('playing')
+                } else {
+                  audio.pause()
+                  document.getElementById('player').innerText = '⏵'
+                  document.getElementById('player').classList.remove('playing')
+                }
+              })()"
+        >
+          ⏵
+        </div>
+      </div>
 
       <div class="between text-center">
         <a href="TODO_DISCORD">MyLady&trade; Village Community Discord</a> &nbsp;•&nbsp;
