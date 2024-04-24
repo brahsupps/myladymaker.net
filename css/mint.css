@@ -1,0 +1,32 @@
+/*---------------------------------------------------------------------------*\
+    Mint
+\*---------------------------------------------------------------------------*/
+
+/* extended from index.css */
+.theme-pink {
+  --mint-button-color: white;
+  --mint-button-background: darkred;
+  --mint-button-border-color: #ffaaaa;
+}
+
+/* extended from index.css */
+.theme-dark {
+  --mint-button-color: hsl(240, 6%, 10%);
+  --mint-button-background: skyblue;
+  --mint-button-border-color: #ffaaaa;
+}
+
+.mint-button {
+  width: auto;
+  margin: 0.5em 0;
+  font-size: 1.3em;
+  padding: 0.5em 1em;
+
+  color: var(--mint-button-color);
+  background: var(--mint-button-background);
+  /* border: 1px solid var(--mint-button-border-color); */
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}

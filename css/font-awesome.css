@@ -1,0 +1,387 @@
+.fa,
+.fab,
+.fal,
+.far,
+.fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: 2.5em;
+  padding-left: 0;
+}
+
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: -2em;
+  position: absolute;
+  text-align: center;
+  width: 2em;
+  line-height: inherit;
+}
+
+.fa-border {
+  border: 0.08em solid #eee;
+  border-radius: 0.1em;
+  padding: 0.2em 0.25em 0.15em;
+}
+
+.fa-pull-left {
+  float: left;
+}
+
+.fa-pull-right {
+  float: right;
+}
+
+.fa.fa-pull-left,
+.fab.fa-pull-left,
+.fal.fa-pull-left,
+.far.fa-pull-left,
+.fas.fa-pull-left {
+  margin-right: 0.3em;
+}
+
+.fa.fa-pull-right,
+.fab.fa-pull-right,
+.fal.fa-pull-right,
+.far.fa-pull-right,
+.fas.fa-pull-right {
+  margin-left: 0.3em;
+}
+
+.fa-spin {
+  animation: a 2s infinite linear;
+}
+
+.fa-pulse {
+  animation: a 1s infinitesteps(8);
+}
+
+@keyframes a {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(0turn);
+  }
+}
+
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  transform: scaleX(-1);
+}
+
+.fa-flip-vertical {
+  transform: scaleY(-1);
+}
+
+.fa-flip-horizontal.fa-flip-vertical,
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+}
+
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1);
+}
+
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270 {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+.fa-inverse {
+  color: #fff;
+}
+
+.fa-user-friends:before {
+  content: "\f500";
+}
+
+.fa-users:before {
+  content: "\f0c0";
+}
+
+.fa-bookmark:before {
+  content: "\f02e";
+}
+
+.fa-bell:before {
+  content: "\f0f3";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-user:before {
+  content: "\f007";
+}
+
+.fa-circle:before {
+  content: "\f111";
+}
+
+.fa-heart:before {
+  content: "\f004";
+}
+
+.fa-square:before {
+  content: "\f0c8";
+}
+
+.fa-times-circle:before {
+  content: "\f057";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-check-circle:before {
+  content: "\f058";
+}
+
+.fa-star:before {
+  content: "\f005";
+}
+
+.fa-exclamation-triangle:before {
+  content: "\f071";
+}
+
+.fa-upload:before {
+  content: "\f093";
+}
+
+.fa-comment-alt:before {
+  content: "\f27a";
+}
+
+.fa-copy:before {
+  content: "\f0c5";
+}
+
+.fa-bookmark:before {
+  content: "\f02e";
+}
+
+.fa-user-plus:before {
+  content: "\f234";
+}
+
+.fa-caret-right:before {
+  content: "\f0da";
+}
+
+.fa-hourglass:before {
+  content: "\f254";
+}
+
+.fa-check-circle:before {
+  content: "\f058";
+}
+
+.fa-moon:before {
+  content: "\f186";
+}
+
+.fa-sun:before {
+  content: "\f185";
+}
+
+.fa-paperclip:before {
+  content: "\f0c6";
+}
+
+.fa-user-slash:before {
+  content: "\f506";
+}
+
+.fa-lock:before {
+  content: "\f023";
+}
+
+.fa-eye-slash:before {
+  content: "\f070";
+}
+
+.fa-user:before {
+  content: "\f007";
+}
+
+.fa-bell:before {
+  content: "\f0f3";
+}
+
+.fa-user-edit:before {
+  content: "\f4ff";
+}
+
+.fa-cog:before {
+  content: "\f013";
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+@font-face {
+  font-family: Font Awesome\5 Free;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/fa-regular-400-min.woff2) format("woff2");
+}
+
+.far {
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Font Awesome\5 Free;
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/fa-solid-900-min.woff2) format("woff2");
+}
+
+.fa,
+.far,
+.fas {
+  font-family: Font Awesome\5 Free;
+}
+
+.fa,
+.fas {
+  font-weight: 900;
+}

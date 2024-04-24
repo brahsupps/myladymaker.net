@@ -1,0 +1,14 @@
+TODO_WEBSITE
+https://myladymaker.net
+
+TODO_DESCRIPTION
+MyLady Maker is a collection of 10,000 generative pfpNFT's in a neochibi aesthetic inspired by street style tribes.
+
+TODO_MARKETPLACE
+https://opensea.io/collection/milady
+
+TODO_TWITTER
+https://twitter.com/MyLadyMaker
+
+TODO_DISCORD
+https://discord.gg/milady

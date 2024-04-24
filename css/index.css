@@ -1,0 +1,308 @@
+@font-face {
+  font-family: Dosis;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Dosis.ttf) format("truetype");
+}
+
+.theme-pink {
+  --text-color: black;
+  --link-color: hsl(240, 100%, 30%);
+  --link-color-hover: red;
+  --accent-color: hsl(270, 100%, 30%);
+  --hr-color: #ffcccc;
+
+  --header-box-bar-color: white;
+  --header-box-bar-background: darkred;
+  --header-box-border-color: darkred;
+  --header-box-background: white;
+
+  --box-bar-color: darkred;
+  --box-bar-background: #ffaaaa;
+  --box-border-color: #ff8888;
+  --box-background: white;
+
+  --body-background: linear-gradient(
+    hsl(0, 46%, 89%),
+    hsl(0, 46%, 89%),
+    hsl(0, 100%, 97%),
+    hsl(0, 100%, 97%),
+    white,
+    white,
+    hsl(0, 46%, 89%)
+  );
+}
+
+.theme-dark {
+  --text-color: hsl(240, 8%, 95%);
+  --link-color: skyblue;
+  --link-color-hover: pink;
+  --accent-color: hsl(45, 100%, 60%);
+  --hr-color: hsl(240, 6%, 22%);
+
+  --header-box-bar-color: white;
+  --header-box-bar-background: hsl(240, 6%, 25%);
+  --header-box-border-color: hsl(240, 6%, 25%);
+  --header-box-background: hsl(240, 6%, 7%);
+
+  --box-bar-color: hsl(240, 6%, 96%);
+  --box-bar-background: hsl(240, 6%, 18%);
+  --box-border-color: hsl(240, 6%, 22%);
+  --box-background: hsl(240, 6%, 7%);
+
+  --body-background: repeating-linear-gradient(
+    135deg,
+    hsl(240, 6%, 13%),
+    hsl(240, 6%, 13%) 3px,
+    hsl(240, 6%, 6%),
+    hsl(240, 6%, 6%) 5.5px
+  );
+}
+
+.theme-switcher {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+  }
+}
+
+html {
+  background: #777;
+}
+
+body {
+  margin: 0;
+  padding: 16px 16px;
+
+  font-size: 18px;
+  font-family: Arial, helvetica, sans-serif;
+
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+
+  color: var(--text-color);
+  background: var(--body-background);
+  /* background-attachment: fixed; */
+}
+
+body.over {
+  -webkit-animation: rainbow 1s steps(10) infinite;
+  animation: rainbow 1s steps(10) infinite;
+}
+
+@-webkit-keyframes rainbow {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rainbow {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+p {
+  margin: 0.5em 0 1em;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  /* color: var(--link-color-hover); */
+  text-decoration: underline;
+}
+
+img,
+iframe {
+  display: block;
+  margin: 0 auto;
+  max-width: 20em;
+  border: 1px solid #777;
+}
+
+h2 {
+  margin-top: 0.001em;
+  margin-bottom: 0.001em;
+  margin-left: 0.25em;
+  font-size: 1.1em;
+}
+
+h3 {
+  margin-left: 0.3em;
+  font-size: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: bold;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.hr {
+  border-top: 1px solid var(--hr-color);
+  margin: 1em 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*---------------------------------------------------------------------------*\
+    Header box
+\*---------------------------------------------------------------------------*/
+
+.header-box {
+  margin: 2em 0;
+  background: var(--box-background);
+  border: 1px solid var(--header-box-border-color);
+}
+
+.header-box-bar {
+  padding: 4px 2px;
+  color: var(--header-box-bar-color);
+  background: var(--header-box-bar-background);
+}
+
+.header-box-inner {
+  padding: 0.5em 1em;
+}
+
+/*---------------------------------------------------------------------------*\
+    Box
+\*---------------------------------------------------------------------------*/
+
+.box {
+  margin: 1em 0 2em;
+  background: var(--box-background);
+  border: 1px solid var(--box-border-color);
+}
+
+.box-bar {
+  padding: 4px 2px;
+  color: var(--box-bar-color);
+  background: var(--box-bar-background);
+}
+
+.box-inner {
+  padding: 0.5em 1em;
+}
+
+.box-section {
+  margin: 1em 1em;
+}
+
+/*---------------------------------------------------------------------------*\
+    Between
+\*---------------------------------------------------------------------------*/
+
+.between {
+  margin: 2em 0;
+}
+.theme-dark .between {
+  text-shadow: -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black, 1px 1px 1px black, 0px 1px 1px black,
+    0px -1px 1px black, 1px 0px 1px black, -1px 0 1px black;
+}
+
+/*---------------------------------------------------------------------------*\
+    Figure
+\*---------------------------------------------------------------------------*/
+
+.figure {
+  /* padding: 1em; */
+  font-style: italic;
+  text-align: center;
+}
+.figure > img,
+.figure > iframe {
+  display: block;
+  margin: 0 auto;
+}
+.figure > span {
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+/*---------------------------------------------------------------------------*\
+    Small displays
+\*---------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 100%;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  div.desc {
+    font-size: x-small;
+  }
+
+  ul {
+    margin-right: 1em;
+  }
+}
+
+/*---------------------------------------------------------------------------*\
+    Gallery
+\*---------------------------------------------------------------------------*/
+
+.gallery_container {
+  display: grid;
+  justify-items: auto;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  padding: 0.5em;
+  width: auto;
+}
+
+.gallery_item {
+  object-fit: cover;
+}
+
+.gallery_item img {
+  border: 1px solid #777;
+  height: auto;
+  width: auto;
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+}
+
+.gallery_item .desc {
+  padding: 1em;
+  text-align: center;
+  font-size: smaller;
+  width: 80%;
+  max-height: 100%;
+}

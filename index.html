@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyLady&trade; Maker</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/mint.css" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta name="title" content="MyLady Maker NFT" />
+    <meta name="keyword" content="MyLady, MyLady Maker, NFT, Generative Art" />
+    <meta name="description" content="TODO_DESCRIPTION" />
+    <link rel="icon" href="images/favicon.ico" type="image/icon type" />
+
+    <meta property="og:title" content="MyLady Maker NFT" />
+    <meta property="og:description" content="TODO_DESCRIPTION" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="TODO_WEBSITE" />
+    <meta property="article:section" content="article" />
+    <meta property="article:published_time" content="2021-08-09T00:00:00+00:00" />
+    <meta property="article:modified_time" content="2021-08-09T00:00:00+00:00" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="TODO_WEBSITE/images/banner.png" />
+    <meta name="twitter:title" content="MyLady Maker NFT" />
+    <meta name="twitter:site" content="MyLadyMaker" />
+    <meta name="twitter:description" content="TODO_DESCRIPTION" />
+    <meta property="og:image" content="TODO_WEBSITE/images/banner.png" />
+  </head>
+
+  <body
+    class="theme-pink"
+    onload="(()=>{
+        const ts = document.getElementById('ts-icon')
+        const theme = localStorage.getItem('theme')
+
+        if (theme === 'theme-pink') {
+            document.body.classList.remove('theme-dark')
+            document.body.classList.add(theme)
+            ts.classList.remove('fa-sun')
+            ts.classList.add('fa-moon', 'fa-sm')
+        }
+        if (theme === 'theme-dark') {
+            document.body.classList.remove('theme-pink')
+            document.body.classList.add(theme)
+            ts.classList.remove('fa-moon', 'fa-sm')
+            ts.classList.add('fa-sun')
+        }
+    })()"
+  >
+    <span
+      class="theme-switcher"
+      onclick="(() => {
+            const ts = document.getElementById('ts-icon')
+
+            if (ts.classList.contains('fa-sun')) {
+                // Change to pink theme
+                ts.classList.remove('fa-sun')
+                ts.classList.add('fa-moon', 'fa-sm')
+                document.body.classList.remove('theme-dark')
+                document.body.classList.add('theme-pink')
+                localStorage.setItem('theme', 'theme-pink')
+            } else {
+                // Change to dark theme
+                ts.classList.remove('fa-moon', 'fa-sm')
+                ts.classList.add('fa-sun')
+                document.body.classList.remove('theme-pink')
+                document.body.classList.add('theme-dark')
+                localStorage.setItem('theme', 'theme-dark')
+            }
+        })()"
+    >
+      <i id="ts-icon" class="fas fa-sun"></i>
+    </span>
+
+    <div style="max-width: 768px; margin: 0 auto">
+      <div class="mascot">
+        <div class="logo" style="margin: 1em">
+          <a href="TODO_MARKETPLACE">
+            <img src="images/banner.png" style="border: 2px solid gray; width: 100%; max-width: 500px"
+          /></a>
+        </div>
+      </div>
+
+      <div class="header-box">
+        <div class="header-box-bar">
+          <h2>Welcome to MyLady&trade; Maker! — 请放轻松!</h2>
+        </div>
+
+        <div class="header-box-inner">
+          <p>
+            MyLady&trade; Maker is a collection of 2,000 generative pfpNFT's in a neochibi aesthetic inspired by street
+            style tribes.
+          </p>
+
+          <!-- start of fun -->
+          <div style="max-width: 360px; margin: 1em auto">
+            <div style="border: 3px dashed red; border-radius: 0%">
+              <div style="border: 3px dashed orange; border-radius: 0%">
+                <div style="border: 3px dashed yellow; border-radius: 0%">
+                  <div style="border: 3px dashed green; border-radius: 0%">
+                    <div style="border: 3px dashed cyan; border-radius: 0%">
+                      <div style="border: 3px dashed blue; border-radius: 0%">
+                        <div style="padding: 1em">
+                          <h2 class="text-center">Now Minting!</h2>
+
+                          <p class="text-center">1378/2000 minted</p>
+
+                          <div style="display: flex; flex-flow: row nowrap; justify-content: center">
+                            <button
+                              class="mint-button"
+                              onmouseover="(() => {
+                                    document.body.classList.add('over')
+                                })()"
+                              onmouseleave="(() => {
+                              document.body.classList.remove('over')
+                            })()"
+                              onclick="window.alert('Mint!')"
+                            >
+                              Mint
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of fun -->
+        </div>
+      </div>
+
+      <!-- 
+      <div style="margin: 0 auto; width: 50%; margin: 2em 0">
+        <audio controls autoplay loop style="width: 100%">
+          <source src="audio/ost.ogg" type="audio/ogg" />
+          <source src="audio/ost.mp3" type="audio/mpeg" />
+        </audio>
+      </div> 
+      -->
+
+      <div class="between text-center">
+        <a href="TODO_DISCORD">MyLady&trade; Village Community Discord</a> &nbsp;•&nbsp;
+        <a href="TODO_TWITTER" target="blank">MyLady&trade; Maker Official Twitter</a>
+      </div>
+
+      <div class="box">
+        <div class="box-bar">
+          <h2>MyLady&trade; Maker Collection</h2>
+        </div>
+
+        <div class="box-inner">
+          <img src="images/myladies/1.jpg" style="margin: 0.5em auto 1em" />
+          <p class="text-center">
+            <a href="TODO_MARKETPLACE"
+              >You can view and trade the MyLady&trade; collection on the secondary market at OpenSea.
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="between">
+        <div class="figure">
+          <img src="images/milady/fruits_milady.png" />
+          <span>MyLady&trade; style is inspired by the subcultural fashion tribes of Y2K Japan.</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-bar">
+          <h2 id="lifestyle_experiences">Lifestyle Experiences</h2>
+        </div>
+        <div class="box-inner">
+          <p>
+            MyLady&trade; is an aesthetic, a lifestyle and a community. We are constantly conceptualizing and developing
+            social extensions of the MyLady&trade; vision.
+          </p>
+
+          <div class="hr"></div>
+
+          <div class="box-section">
+            <p>
+              <b>MyLady&trade; VRtube:</b> Each MyLady&trade; was designed as separate asset layers, so they were
+              readymade for Live2D rigging for use as VRtube avatars. We've rolled out MyLady&trade; VTube avatars in
+              collaboration with Hologram Labs. Just connect your wallet with
+              <a href="https://www.hologram.xyz/">the Hologram app</a> to use any MyLady&trade; in streams or videocall.
+            </p>
+
+            <div class="figure">
+              <img src="images/milady/miladyvr.png" />
+              <span>"Hey MyLady&trade; Fans! Welcome to the Daily MyLady&trade;!!"</span>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <!-- <div class="box-section">
+            <p>
+              <b>MyLady&trade; Raves:</b> Holder meetups in the form of warehouse raves put on in major cities like NYC,
+              London, Tokyo in collaboration with their local underground scenes.
+            </p>
+
+            <div class="figure">
+              <iframe
+                src="https://www.youtube.com/embed/tA7DZ6mMzTQ"
+                style="height: 315px; width: 100%; max-width: 420px"
+              >
+              </iframe>
+              <span>
+                <a href="https://www.instagram.com/remiliaco/">MyLady&trade; Rave #5 - NYC 6-24-22</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="hr"></div> -->
+
+          <div class="box-section">
+            <p>
+              <b>Miladycore Bootlegs:</b> <a href="https://store.remilia.org">Bootleg merch store</a> for commissioned
+              knockoffs of designer cosmetic series with logos detourned to feature MyLady&trade; graphics.
+            </p>
+
+            <div class="figure">
+              <img src="images/milady/bootleg.png" />
+              <span>
+                <a href="https://store.remilia.org/collections/milady-bootlegs">The Prada bootleg buckethat</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="box-section">
+            <p>
+              <b>MyLady&trade; Minecraft Metaverse:</b> Highly customized Minecraft server exclusive to the
+              MyLady&trade; community, featuring NFT-gated land plots and regular community events. Join by entering
+              milady.world in Minecraft after authenticating in
+              <a href="discord.gg/milady">MyLady&trade; Village discord</a>.
+            </p>
+
+            <div class="figure">
+              <img src="images/milady/minecraft.gif" />
+              <span><a href="TODO_DISCORD">Join MyLady&trade; Village</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-section">
+        <div class="figure">
+          <img src="images/milady/milady4.jpg" />
+          <span>MyLady&trade; Maker produces eclectic but spiritually coherent outfits.</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-bar">
+          <h2 id="expansion_packs">Expansion Packs</h2>
+        </div>
+        <div class="box-inner">
+          <p>
+            As a <a href="https://viralpubliclicense.org">copylefted</a> brand, MyLady&trade; supports a thriving
+            ecosystem of derivative projects from its fan community. Remilia Collective also produces official
+            expansions given away to MyLady&trade; holders following our
+            <a href="https://goldenlight.mirror.xyz/qhsg6I_zn8o40B_Roo9Owabc_9dwAnlxFMADHM3D-Qk"
+              >hypercitational method</a
+            >.
+          </p>
+
+          <div class="hr"></div>
+
+          <div class="box-section">
+            <p>
+              <b>Banners NFT:</b> Generative NFT header photo series, a free mint offered to MyLady&trade; holders, made
+              in collaboration with the community's submitted captions.
+            </p>
+
+            <div class="figure">
+              <img src="images/milady/banners.jpg" />
+              <span><a href="TODO_WEBSITE/banners/">Banners NFT</a></span>
+            </div>
+
+            <p>
+              Banners recontextualizes the userboxes of early internet personalization into modern social media
+              platforms, with a syncretic design citing wikipedia userpages, forum signatures, and operating system
+              themes and text content detourning the basic element of userbox self-description with absurd, aesthetic
+              and hypercitational references.
+            </p>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="box-section">
+            <p>
+              <b>Redacted Remilio Babies:</b> Companion collection to MyLady&trade; Maker, as the canonical zoomer
+              little brother to MyLady&trade;. Where MyLady&trade; explores Japanese style tribes, Remilio uses the
+              neochibi pfp framework to engage reactionary, schizophrenic and zoomer aesthetics.
+            </p>
+
+            <div class="figure">
+              <img src="images/milady/remilio.png" />
+              <span><a href="https://remilio.org">Remilio #3452</a></span>
+            </div>
+
+            <p>
+              Remilio's design extends one of the earliest artistic spinoffs of MyLady&trade; Sonora Sprite's "OG
+              MyLady&trade;" predating the MyLady&trade; Maker NFT.
+            </p>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="box-section">
+            <p>
+              <b>MyLady&trade;, That B.I.T.C.H.:</b> Surprise free mint offered directly from contract, featuring
+              MyLady&trade; in a bootleg english t-shirt each spelling out B-I-T-C-H with random words.
+            </p>
+
+            <div class="figure">
+              <img src="images/milady/thatbitch.png" />
+              <span>
+                <a href="TODO_MARKETPLACEbitch">MyLady&trade;, That B.I.T.C.H.</a>
+              </span>
+            </div>
+            <p>
+              Words used for the random generation were sourced from cultural critic Angelicism01's essay on
+              MyLady&trade;, "<a href="https://cashedcobrazhousewriter.substack.com/p/no-milady-nfts-not-now-the-return"
+                >NO MILADY NFTS, NOT NOW</a
+              >" with Chief Keef's "Finally Rich", and Chief Keef's "Kush with them Beans," as a playful and irreverent
+              response to the environmental and capitalist criticisms made in Angelicism01's review, as a commentary on
+              the inevitable cultural subsumption process of capitalism.
+            </p>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="box-section">
+            <p>
+              <b>Pixelady Maker:</b> Pixel art derivative heavily referencing wider MyLady&trade; memes and culture and
+              general extremely online internet aesthetics, lead by
+              <a href="https://twitter.com/egrevore">Egrevore</a> with art by
+              <a href="https://twitter.com/MRYOKOU">Mr. Yokou</a>.
+            </p>
+
+            <div class="figure">
+              <img src="images/milady/pixelady.png" />
+              <span><a href="https://twitter.com/PixeladyMaker">Pixelady #3452</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="between">
+        <h3>Details:</h3>
+        <ul>
+          <li>
+            <b>Avatar-first design:</b> Illustrated from the beginning to ensure strong social media profile aesthetics
+            with an emphasis on fashion. Ties into the companion <a href="#expansion_packs">Banner NFT</a>.
+          </li>
+          <li>
+            <b>Chain roll function:</b> Randomized cosmetics are organized into
+            <a href="#themes">different style themes</a>, with a chance of the consecutive generation sticking to the
+            same theme, designed to organically produce aesthetic coherency.
+          </li>
+          <li>
+            <b>Graded for Drip</b>: Each MyLady&trade; has ranked badges on a
+            <a href="#drip-grade">variety of weighted metrics</a>, adding additional layers to a speculative market
+            beyond objective trait scarcity.
+          </li>
+          <li>
+            <b>Neochibi Aesthetic:</b> All art produced by digital painter,
+            <a href="https://twitter.com/Milady_Sonoro">MyLady&trade; Sonora Sprite</a>, in their unique childlike take
+            on anime illustration.
+          </li>
+          <li>
+            <b>MyLady&trade; Village:</b> Members-only Discord community and designated launchpad for
+            <a href="#expansion_packs">expansions to the MyLady&trade; project</a>, such as generative NFT banners and
+            mixtape series.
+          </li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <div class="box-bar">
+          <h2>Style Themes</h2>
+        </div>
+        <div class="box-inner">
+          <div>
+            <p>
+              MyLady&trade; Maker generates a variety of accessories, but the two primary cosmetics - Hat & Shirt - are
+              each divided into five major style themes inspired by Tokyo fashion tribes:
+            </p>
+
+            <div class="gallery_container">
+              <div class="gallery_item">
+                <img src="images/milady/gyaru.png" alt="Gyaru MyLady&trade;" />
+                <div class="desc">Gyaru</div>
+              </div>
+
+              <div class="gallery_item">
+                <img src="images/milady/prep.png" alt="Prep MyLady&trade;" />
+                <div class="desc">Prep</div>
+              </div>
+
+              <div class="gallery_item">
+                <img src="images/milady/lolita.png" alt="Lolita MyLady&trade;" />
+                <div class="desc">Lolita</div>
+              </div>
+
+              <div class="gallery_item">
+                <img src="images/milady/hypebeast.png" alt="Hypebeast MyLady&trade;" />
+                <div class="desc">Hypebeast</div>
+              </div>
+
+              <div class="gallery_item">
+                <img src="images/milady/harajuku.png" alt="Harajuku MyLady&trade;" />
+                <div class="desc">Harajuku</div>
+              </div>
+            </div>
+            <div class="hr"></div>
+            <p>
+              The bottom border of a MyLady&trade; card is defined by its theme(s). A MyLady&trade; whose Hat & Shirt
+              cosmetic share the same theme receives +5 on their <a href="#drip_score">Drip Score</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-bar">
+          <h2 id="drip-grade">Drip Grade</h2>
+        </div>
+        <div class="box-inner">
+          <p>
+            Each MyLady&trade; has a drip score rating their overall stylisnhness, with each cosmetic scored on its
+            rarity, then weighted against the prominence of its slot, with a multiplier applied for theme or costume
+            complete badges. Drip score are designed to help tie value to aesthetics over pure trait scarcity.
+          </p>
+
+          <p>
+            Each MyLady&trade; is given a letter grading for their drip score (D, C, B, A, S, SS) to help categorize the
+            quality of an individual MyLady&trade;.
+          </p>
+        </div>
+      </div>
+
+      <div class="between">
+        <div class="figure">
+          <img src="images/milady/milady3.jpg" />
+          <span>We love a cute MyLady&trade;!</span>
+        </div>
+      </div>
+
+      <div class="header-box">
+        <div class="header-box-bar">
+          <h2>About MyLady&trade; Maker — 关于美少女梦工厂</h2>
+        </div>
+
+        <div class="header-box-inner">
+          <div class="text-center">
+            <p style="margin: 1em 0">
+              MyLady&trade; Maker is a
+              <a href="https://brahsupps.com" target="blank">BRAH CORP</a>
+              project with art by
+              <a href="https://twitter.com/brahsupps">Brah</a> and design by Charlotte Wang.
+            </p>
+
+            <!-- <p>View the <a href="">Analytics Dashboard</a> or read the <a href="">Design Notes</a>.</p> -->
+
+            <div class="hr"></div>
+
+            <p style="margin: 1em 0">
+              <a href="TODO_DISCORD">MyLady&trade; Village Community Discord</a>
+              &nbsp;•&nbsp;
+              <a href="TODO_TWITTER" target="blank">MyLady&trade; Maker Official Twitter</a>
+              &nbsp;•&nbsp;
+              <a href="https://etherscan.io/address/0x5af0d9827e0c53e4799bb226655a1de152a425a5" target="blank"
+                >Contract</a
+              >
+            </p>
+
+            <div class="hr"></div>
+
+            <p style="margin: 1em 0">
+              All MyLady&trade; Maker branding, assets and NFT's are copylefted under the
+              <a href="https://viralpubliclicense.org">Viral Public License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
