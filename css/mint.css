@@ -16,6 +16,13 @@
   --mint-button-border-color: #ffaaaa;
 }
 
+/* extended from index.css */
+.theme-sky {
+  --mint-button-color: white;
+  --mint-button-background: #de2900;
+  --mint-button-border-color: #ff8f76;
+}
+
 .mint-button {
   width: auto;
   margin: 0.5em 0;
