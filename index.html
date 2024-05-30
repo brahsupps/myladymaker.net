@@ -21,7 +21,7 @@
     <meta name="keyword" content="MyLady, MyLady Maker, NFT, Generative Art" />
     <meta
       name="description"
-      content="MyLady&trade; Maker is a collection of 2,000 generative pfpNFTs in a neoOFFBRAND aesthetic inspired by
+      content="MyLady&trade; Maker is a collection of generative pfpNFTs in a neoOFFBRAND aesthetic inspired by
             street style tribes."
     />
     <link rel="icon" href="images/favicon.ico" type="image/icon type" />
@@ -29,7 +29,7 @@
     <meta property="og:title" content="MyLady Maker NFT" />
     <meta
       property="og:description"
-      content="MyLady&trade; Maker is a collection of 2,000 generative pfpNFTs in a neoOFFBRAND aesthetic inspired by
+      content="MyLady&trade; Maker is a collection of generative pfpNFTs in a neoOFFBRAND aesthetic inspired by
             street style tribes."
     />
     <meta property="og:type" content="article" />
@@ -44,7 +44,7 @@
     <meta name="twitter:site" content="MyLadyMaker" />
     <meta
       name="twitter:description"
-      content="MyLady&trade; Maker is a collection of 2,000 generative pfpNFTs in a neoOFFBRAND aesthetic inspired by
+      content="MyLady&trade; Maker is a collection of generative pfpNFTs in a neoOFFBRAND aesthetic inspired by
             street style tribes."
     />
     <meta property="og:image" content="https://myladymaker.net/images/banner.png" />
@@ -57,8 +57,16 @@
 
       const themes = ['theme-pink', 'theme-dark', 'theme-sky']
       const icons = ['fa-moon', 'fa-sun', 'fa-sm', 'fa-heart']
-      const theme = localStorage.getItem('theme')
+      let theme = localStorage.getItem('theme')
       const ts = document.getElementById('ts-icon')
+
+      if (theme == null) {
+        theme = 'theme-pink'
+        localStorage.setItem('theme', theme)
+      }
+
+      console.log('theme', theme)
+
 
       // Add the icons of the *next* theme to each ts.classList
       if (theme === 'theme-pink') {
@@ -135,12 +143,12 @@
 
         <div class="header-box-inner">
           <p>
-            MyLady&trade; Maker is a collection of 2,000 generative pfpNFTs in a neoOFFBRAND aesthetic inspired by
-            street style tribes.
+            MyLady&trade; Maker is a collection of generative pfpNFTs in a neoOFFBRAND aesthetic inspired by street
+            style tribes.
           </p>
 
           <!-- start of fun -->
-          <div style="max-width: 360px; margin: 1em auto">
+          <!-- <div style="max-width: 360px; margin: 1em auto">
             <div style="border: 3px dashed red; border-radius: 0%">
               <div style="border: 3px dashed orange; border-radius: 0%">
                 <div style="border: 3px dashed yellow; border-radius: 0%">
@@ -150,7 +158,7 @@
                         <div style="padding: 1em">
                           <h2 class="text-center">Now Minting!</h2>
 
-                          <p class="text-center">1378/5000 minted</p>
+                          <p class="text-center">1378/? minted</p>
 
                           <div style="display: flex; flex-flow: row nowrap; justify-content: center">
                             <button
@@ -173,7 +181,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- end of fun -->
         </div>
       </div>
