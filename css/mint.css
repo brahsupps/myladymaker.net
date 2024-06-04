@@ -5,21 +5,21 @@
 /* extended from index.css */
 .theme-pink {
   --mint-button-color: white;
-  --mint-button-background: darkred;
+  --mint-button-background: var(--accent-color);
   --mint-button-border-color: #ffaaaa;
 }
 
 /* extended from index.css */
 .theme-dark {
-  --mint-button-color: hsl(240, 6%, 10%);
-  --mint-button-background: skyblue;
+  --mint-button-color: black;
+  --mint-button-background: var(--accent-color);
   --mint-button-border-color: #ffaaaa;
 }
 
 /* extended from index.css */
 .theme-sky {
   --mint-button-color: white;
-  --mint-button-background: #de2900;
+  --mint-button-background: var(--accent-color);
   --mint-button-border-color: #ff8f76;
 }
 
